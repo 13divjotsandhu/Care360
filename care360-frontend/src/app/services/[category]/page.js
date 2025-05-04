@@ -52,7 +52,7 @@ export default function StaticCategoryDetailPage() {
         <div className={styles.pageContainer}>
             <h1 className={styles.pageTitle}>Error</h1>
             <p className={`${styles.errorMessage} text-center`}>
-                Invalid service category: '{categoryId}'. Please go back and select a valid category.
+                Invalid service category: {categoryId} . Please go back and select a valid category.
             </p>
             <div className="text-center mt-8">
                 <Link href="/services" className="text-blue-600 hover:underline">
@@ -77,7 +77,7 @@ export default function StaticCategoryDetailPage() {
           <ul className={styles.serviceList}>
             {/* Map through the hardcoded services for this category */}
             {categoryData.services.map((service) => (
-              // Use the hardcoded 'id' as the key (replace with real _id later)
+              // Use the hardcoded id as the key (replace with real _id later)
               <li key={service.id} className={styles.serviceItem}>
                 <div className={styles.serviceDetails}>
                   <h3 className={styles.serviceName}>{service.name}</h3>
