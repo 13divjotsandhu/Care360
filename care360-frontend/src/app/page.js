@@ -108,7 +108,7 @@ export default function HomePage() {
       <section className={styles.sloganSection}>
          <div className={styles.container}> {/* Optional container */}
             <p className={styles.sloganText}>
-            "Protect, Repair, Inspect: We've Got Your Vehicle Covered.
+            "Protect, Repair, Inspect: We have Got Your Vehicle Covered.
             "
             </p>
          </div>
