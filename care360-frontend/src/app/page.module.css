@@ -1,0 +1,330 @@
+
+
+.pageContainer {
+ 
+  padding: 0 0 2rem 0; /* Remove horizontal padding, add bottom padding */
+}
+
+/* Hero Section Styles */
+.heroSection {
+  margin-top: 4rem;
+  margin-bottom: 10rem; 
+  padding: 13rem 1rem;
+  text-align: center;
+  background-image:  linear-gradient(rgb(255, 221, 221), rgb(59, 20, 55), rgb(229, 235, 229));
+position: relative;
+  background-color: #000000;
+}
+
+.heroTitle {
+  font-size: 5rem; 
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ffffff; 
+}
+
+.heroSubtitle {
+  font-size: 1.1rem; 
+  color: #c9d0d8; 
+  margin-bottom: 2rem;
+  max-width: 600px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroButton {
+  display: inline-block;
+  background-color: #170420;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.heroButton:hover {
+  background-color: #abf5b1;
+  color: #700567;
+  text-decoration: none;
+  
+}
+
+/* New Section Styles */
+
+.section {
+  padding: 2rem  0; /* Add some horizontal padding */ 
+  margin-left: 1rem;
+  margin-bottom: 8rem; /* Remove bottom margin if sections touch */
+  width: 100%; /* Ensure section takes full width */
+  
+}
+
+.sectionTitle {
+   font-size: 6rem;
+   font-weight: 700;
+   margin-bottom: 2rem;
+   margin-top: 0;
+   padding: 1px 1px;   
+   color: #3b0239; 
+   text-align: center;
+}
+
+/* Video Slider Placeholder Styles */
+.videoSliderSection {
+  background-color: #ffffff; 
+  width: 95%;
+  height: auto;  
+  margin-left: auto; 
+  margin-right: auto; 
+  
+  
+  
+}
+.videoPlaceholder {
+  background-color: #2d2e30; /* Placeholder color */
+  height: 650px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 8px;
+  width: 100%; 
+  position: relative ;
+  overflow: hidden; 
+  
+}
+/* Picture Section Styles */
+.pictureSection {
+  background-color: #ffffff; 
+  padding: 4rem 1rem; 
+}
+.pictureGrid {
+ display: flex; 
+ flex-wrap: wrap; 
+ gap: 1.5rem; 
+ width: 100%; 
+ justify-content: center; 
+}
+.picturePlaceholder {
+ background-color: #ced4da;
+ height: 200px; 
+ border-radius: 8px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: #495057;
+ /* (100% / 3) - (2 * gap / 3) */
+ /*  1.5rem gap */
+ flex-basis: calc(33.333% - 1rem); 
+ flex-grow: 0; 
+ flex-shrink: 0; /* Don't allow items to shrink excessively if container is too small */
+ min-width: 200px; 
+ position: relative ;
+ overflow: hidden; /* Ensures image stays within bounds */
+ transition: box-shadow 0.4s ease-in-out, transform 0.3s ease-in-out;
+
+}
+
+.picturePlaceholder:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px); /*lift effect */
+}
+
+/* Slogan Section Styles - Full Screen Height */
+.sloganSection {
+  background-color: #b0ffa5; 
+  
+  
+  padding: 4rem 2rem; 
+  height: 85vh;
+  text-align: center;
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  width: 100%;
+}
+.sloganText {
+  font-size: 4rem;
+  font-weight: 700;
+  font-style: italic;
+   color: #3b0239;    
+}
+
+/* About Us Section Styles */
+.aboutSection {
+  background-color: #ffffff;
+  margin-top: 10rem;
+  margin-bottom: 0;
+}
+.aboutContent {
+  width: 100%;
+  line-height: 1.7;
+  color: #495057;
+  text-align: justify; /* Optional: justify text */
+}
+.aboutContent h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.servicesSection {
+  padding-top: 0;
+   background-color: #ffffff; /* Match page background or different color */
+   margin-top:0;
+   margin-bottom: 10rem;
+}
+
+.servicesTitle {
+ 
+  font-size: 6rem;
+  font-weight: 700;
+   margin-bottom: 8rem;
+  color:#3b0239; /* Darker heading color */
+  text-align: center;
+}
+
+.servicesGrid {
+  display: grid;
+  gap: 2rem; /* Space between cards */
+  grid-template-columns: 1fr; /* Default: 1 column */
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+}
+/* Service Card Styles */
+.serviceCard {
+  background-color: rgb(255, 253, 253);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.serviceCard:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px); 
+}
+
+.serviceIcon {
+  font-size: 3rem; 
+  margin-bottom: 1rem;
+  color:#3b0239; 
+  display: block;
+}
+
+.serviceName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color:#3b0239; 
+}
+
+.serviceDescription {
+  color: #6c757d;
+  font-size: 0.9rem; 
+  line-height: 1.4; 
+  margin-bottom: 1rem;
+  flex-grow: 1; 
+}
+
+.serviceLink {
+  margin-top: auto; 
+  background-color: #000000; 
+  color:#ffffff;
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+  width: 100%; /* Make link take full width */
+}
+
+.serviceLink:hover {
+  background-color: #abf5b1;
+  color: #700567;
+  
+  text-decoration: none;
+}
+
+
+.container {
+  width: 90%;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.scrollIndicator {
+  position: absolute; 
+  bottom: 3rem;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Fine-tune horizontal centering */
+  color: rgb(8, 5, 5); 
+  font-size: 5rem; 
+  cursor: default; 
+  animation: bounce 2s infinite;
+}
+
+/* Define the bounce animation */
+@keyframes bounce {
+  
+  40% {
+    /*  At 40% through the animation, the element moves up by 15 pixels (translateY(-15px) */
+    transform: translateX(-50%) translateY(-15px);
+  }
+  60% {
+    
+    transform: translateX(-50%) translateY(-7px);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust Hero padding */
+  .heroSection {
+    padding: 8rem 1rem; /* Less vertical padding */
+    margin-bottom: 6rem;
+  }
+  .heroTitle {
+    font-size: 3rem;
+  }
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+  .sectionTitle {
+    font-size: 3rem;
+  }
+  .sloganText {
+    font-size: 2.5rem;
+  }
+  .aboutContent h3 {
+    font-size: 1.5rem;
+  }
+  .servicesTitle {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+  }
+  /* Adjust Scroll Indicator size and position */
+  .scrollIndicator {
+    font-size: 3rem; /* Smaller arrow */
+    bottom: 2rem; /* Closer to bottom */
+  }
+}

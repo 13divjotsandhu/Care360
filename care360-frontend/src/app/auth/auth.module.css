@@ -1,0 +1,140 @@
+.authContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; 
+    padding: 2rem ;
+    background-color: #ffffff;
+    margin-bottom: 11rem; 
+  }
+  
+  .authBox {
+    background-color: white;
+    padding: 2rem 2.5rem; /* Adjust padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px; 
+    border: 1px solid #dee2e6;
+    overflow: hidden; /* Ensure content fits */
+  }
+  
+  
+  .tabContainer {
+    display: flex;
+    margin-bottom: 2rem; /* Space below tabs */
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .tabButton {
+    flex-grow: 1; /* Make buttons share space */
+    padding: 0.8rem 1rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #6c757d; 
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    text-align: center;
+  }
+  
+  .tabButton:hover {
+    color:#3b0239; 
+  }
+  
+  .tabButtonActive {
+    color: #3b0239; 
+    border-bottom-color: #3b0239; 
+    font-weight: 600;
+  }
+  
+  
+  .inputBox {
+    margin-bottom: 1.25rem;
+    text-align: left;
+  }
+  
+  .inputBox label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #495057;
+  }
+  
+  .inputBox input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .inputBox input:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Button Styles (reused/adapted) */
+  .submitButton {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 1rem;
+    color: white;
+  }
+  
+  .loginBtn {
+    background-color:#0b0c0d; 
+  }
+  .loginBtn:hover {
+    background-color:#b0ffa5; 
+        
+        color: #3b0239;
+  }
+  
+  .registerBtn {
+    background-color: #28a745; 
+  }
+  .registerBtn:hover {
+    background-color: #218838;
+  }
+  
+  
+  .forgotPassword {
+    display: block;
+    text-align: right;
+    margin-top: -0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  .forgotPassword:hover {
+    text-decoration: underline;
+  }
+  
+  /* Error/Success Message Styles */
+  .messageArea {
+    margin-top: 1rem;
+    min-height: 1.2em;
+    font-size: 0.875rem;
+    text-align: center;
+  }
+  .errorMessage {
+    color: #dc3545; 
+  }
+  .successMessage {
+    color: #28a745; 
+  }
+  

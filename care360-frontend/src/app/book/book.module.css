@@ -1,0 +1,103 @@
+
+.pageContainer {
+    padding: 2rem 1rem;
+    max-width: 700px; 
+    margin: 2rem auto; 
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dee2e6;
+  }
+  
+  .pageTitle {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color:#3b0239; 
+  }
+  
+  .serviceInfo {
+    background-color: #e7f3ff; 
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #007bff; 
+  }
+  
+  .serviceInfo p {
+    margin: 0.3rem 0;
+    color: #0056b3;
+  }
+  
+  .serviceInfo strong {
+    color: #004085; 
+  }
+  
+  .formGroup {
+    margin-bottom: 1.5rem;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #495057;
+  }
+  
+  .formGroup input[type="date"],
+  .formGroup input[type="time"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    appearance: none; 
+  }
+  
+  .formGroup input:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .submitButton {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 1rem;
+  }
+  
+  .submitButton:hover {
+    background-color: #218838; 
+  }
+  
+  .submitButton:disabled {
+    background-color: #6c757d; 
+    cursor: not-allowed;
+  }
+  
+  .messageArea {
+    margin-top: 1.5rem;
+    min-height: 1.2em; 
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 500;
+  }
+  .errorMessage {
+    color: #dc3545; 
+  }
+  .successMessage {
+    color: #28a745; 
+  }
+  

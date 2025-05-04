@@ -1,0 +1,180 @@
+.pageContainer {
+    padding: 2rem 1rem; 
+  }
+  
+  .pageTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+    color: #343a40; 
+  }
+  
+  .userInfo {
+    background-color: #e7f3ff; 
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+    border: 1px solid #b8daff;
+  }
+  
+  .userInfo h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #0056b3;
+  }
+  
+  .userInfo p {
+    margin: 0.4rem 0;
+    color: #004085;
+    font-size: 1rem;
+  }
+  
+  .userInfo strong {
+    margin-right: 0.5rem;
+  }
+  
+  .bookingsSection {
+    margin-top: 2rem;
+  }
+  
+  .bookingsTitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #495057; 
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .loadingMessage,
+  .errorMessage {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 2rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+  }
+  
+  .loadingMessage {
+    color: #007bff; /* Blue */
+    background-color: #e7f3ff;
+  }
+  
+  .errorMessage {
+    color: #dc3545; /* Red */
+    background-color: #f8d7da;
+  }
+  
+  .noBookingsMessage {
+    text-align: center;
+    font-style: italic;
+    color: #6c757d;
+    margin-top: 2rem;
+    padding: 1rem 1rem 22rem;
+
+  }
+  
+  .bookingsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1.5rem; /* Space between booking cards */
+  }
+  
+  .bookingCard {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    justify-content: space-between;
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  
+  .bookingCard:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bookingCard h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #007bff; 
+    margin: 0 0 0.75rem 0;
+  }
+  
+  .bookingCard p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+    color: #495057;
+  }
+  
+  .bookingCard strong {
+    color: #343a40;
+    min-width: 60px; /* Align labels */
+    display: inline-block;
+  }
+  
+  .bookingActions {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+    text-align: right; /* Align button to the right */
+  }
+  
+  /* Reusing status badge styles from admin */
+  .statusBadge {
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px; 
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-left: 0.5rem; 
+  }
+  
+  .statusPending {
+    background-color: #fff3cd; 
+    color: #856404;
+  }
+  
+  .statusConfirmed {
+    background-color: #d4edda; 
+    color: #155724;
+  }
+  
+  .statusCompleted {
+    background-color: #d1ecf1; 
+    color: #0c5460;
+  }
+  
+  /* Reusing chat button styles from admin */
+  .chatButton {
+    background-color: #15f32b; 
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+    white-space: nowrap;
+    display: inline-block; 
+  }
+  
+  .chatButton:hover {
+    background-color: #138496; 
+    text-decoration: none;
+  }
+  @media (max-width: 768px) {
+
+
+    .bookingsTitle {
+      text-align: center;
+    }
+  }

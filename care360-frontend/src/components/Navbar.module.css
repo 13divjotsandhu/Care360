@@ -1,0 +1,141 @@
+    /* Navbar specific styles */
+    .navbar {
+        background-color: #3b0239; 
+        padding: 1rem 0;
+        color: rgb(255, 255, 255);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: sticky; 
+        top: 0;
+        z-index: 50; /* Ensure it's above other content */
+        
+}
+
+
+    
+  
+      .container {
+        width: 90%;
+        max-width: 1500px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+  
+      .brand {
+        font-size: 1.75rem; 
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+      }
+  
+      .brand:hover {
+        color: #cce5ff; 
+        text-decoration: none;
+      }
+  
+      .navLinks {
+        display: flex;
+        gap: 1rem; 
+        align-items: center;
+      }
+  
+      .navLink {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 0.75rem;
+        border-radius: 4px;
+        transition: background-color 0.2s ease-in-out;
+      }
+  
+      .navLink:hover {
+        background-color: #ffffff; 
+        text-decoration: none;
+        color:#3b0239
+      }
+  
+      /* Basic button styling */
+      .button {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        font-weight: 500;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        text-decoration: none; 
+        display: inline-block; /* Align properly */
+        text-align: center;
+      }
+  
+      .loginButton {
+        background-color: white;
+        color: #007bff; 
+      }
+  
+      .loginButton:hover {
+        background-color:#b0ffa5; 
+        
+        color: #3b0239;
+        
+      }
+  
+      .signupButton {
+        background-color: #28a745; 
+        color: white;
+      }
+  
+      .signupButton:hover {
+        background-color: #218838; 
+      }
+  
+      .logoutButton {
+        background-color: #dc3545; 
+        color: white;
+      }
+  
+      .logoutButton:hover {
+        background-color: #c82333; 
+      }
+
+     
+      
+      @media (max-width: 768px) {
+        .navbar {
+          padding: 0.5rem 0; 
+          position:static;
+        }
+  
+      
+        .container {
+          width: 95%; /* Use more width on smaller screens */
+        }
+      
+        .brand {
+          display: none;
+          font-size: 1rem; /* Slightly smaller brand name */
+        }          
+
+        
+      
+        .navLinks  { 
+          font-size: 1rem;
+          display: block;
+          width: 100%; 
+          text-align: center; 
+          margin-top: 0.5rem; 
+  }
+
+  /* Adjust individual link/button styles */
+  .navLink,.logoutButton, .button {
+   
+     display:block; 
+     margin-bottom: 0.5rem; 
+     text-align: center; 
+     width: 100%; 
+     padding: 0.6rem 0.8rem; 
+     font-size: 0.9rem;
+  }
+
+ }
+      

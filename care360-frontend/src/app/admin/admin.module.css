@@ -1,0 +1,174 @@
+/* Styles for the Admin Dashboard Page */
+
+.pageContainer {
+    padding: 2rem 1rem; 
+  }
+  
+  .pageTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+    color: #343a40; 
+  }
+  
+  .loadingMessage,
+  .errorMessage {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 2rem;
+    border-radius: 6px;
+  }
+  
+  .loadingMessage {
+    color: #007bff; /* Blue */
+    background-color: #e7f3ff;
+  }
+  
+  .errorMessage {
+    color: #dc3545; /* Red */
+    background-color: #f8d7da;
+  }
+  
+  .bookingsTable {
+    width: 100%;
+    border-collapse: collapse; /* Remove space between borders */
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures border-radius clips content */
+  }
+  
+  .bookingsTable th,
+  .bookingsTable td {
+    border: 1px solid #dee2e6; 
+    padding: 0.8rem 1rem; 
+    text-align: left;
+    vertical-align: middle; 
+  }
+  
+  .bookingsTable th {
+    background-color: #f8f9fa; 
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .bookingsTable tbody tr:nth-child(even) {
+    background-color: #f8f9fa; 
+  }
+  
+  .bookingsTable tbody tr:hover {
+    background-color: #e9ecef; 
+  }
+  
+  .bookingsTable td {
+    font-size: 0.95rem;
+    color: #212529;
+  }
+  
+  /* Styling for status badges */
+  .statusBadge {
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px; 
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    display: inline-block;
+  }
+  
+  .statusPending {
+    background-color: #fff3cd; 
+    color: #856404;
+  }
+  
+  .statusConfirmed {
+    background-color: #d4edda; 
+  }
+  
+  .statusCompleted {
+    background-color: #d1ecf1; 
+    color: #0c5460;
+  }
+  
+  .chatButton {
+    background-color: #15f32b; 
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+    white-space: nowrap;
+  }
+  
+  .chatButton:hover {
+    background-color: #5a6268; 
+    text-decoration: none;
+  }
+  
+  @media (max-width: 768px) {
+    .pageContainer {
+      padding: 1rem 0.5rem; 
+    }
+    .pageTitle {
+      font-size: 1.8rem; 
+      margin-bottom: 1.5rem;
+    }
+  
+    /* Hide table header */
+    .bookingsTable thead {
+      display: none;
+    }
+  
+    /* Make table and rows behave like blocks */
+    .bookingsTable,
+    .bookingsTable tbody,
+    .bookingsTable tr {
+      display: block;
+      width: 100%;
+    }
+  
+    .bookingsTable tr {      
+      margin-bottom: 1rem; 
+      border: 1px solid #dee2e6;
+      border-radius: 6px; 
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      background-color: #ffffff; 
+    }
+     /* Remove zebra striping for card layout */
+    .bookingsTable tbody tr:nth-child(even) {
+        background-color: #ffffff;
+    }
+  
+    /* Make cells stack vertically */
+    .bookingsTable td {
+      display: block; /* Stack cells */
+      text-align: center; 
+      padding-left: 10%; 
+      position: relative; 
+      border: none; /* Remove cell borders */
+      border-bottom: 1px dotted #eee; 
+      font-size: 0.9rem;
+    }
+  
+    .bookingsTable td:last-child {
+      border-bottom: none; /* Remove border from last cell */
+    } 
+  
+    .statusBadge {     
+      display: inline-block; 
+      margin-top: 0.25rem; 
+   }
+   .chatButton {     
+      display: inline-block; 
+      margin-top: 0.5rem;
+   }
+    
+  }

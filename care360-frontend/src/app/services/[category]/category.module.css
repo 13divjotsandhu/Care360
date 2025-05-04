@@ -1,0 +1,140 @@
+    /* Styles for the Category Detail Page (Service List) */
+    /* Using the same styles as the previous detailed services list */
+
+    .pageContainer {
+      padding: 2rem 1rem; 
+    }
+
+    .pageTitle {
+      text-align: center;
+      font-size: 2.5rem; 
+      font-weight: bold;
+      margin-bottom: 3rem;
+      color:#3b0239; 
+      text-transform: capitalize; 
+    }
+
+    .categorySection {
+       
+       margin-bottom: 2rem;
+    }
+
+    .categoryTitle {
+      
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: #007bff; /* Blue category title */
+      text-align: center;
+      
+    }
+
+    .serviceList {
+      list-style: none; 
+      padding: 0;
+      margin: 0;
+      background-color: #ffffff; /* White background for list area */
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e9ecef;
+      overflow: hidden; 
+    }
+
+    .serviceItem {
+      display: flex;
+      flex-direction: column; 
+      justify-content: space-between;
+      align-items: flex-start; 
+      padding: 1.25rem 1.5rem; 
+      border-bottom: 1px solid #e9ecef; 
+    }
+
+    .serviceItem:last-child {
+      border-bottom: none;
+    }
+
+    @media (min-width: 768px) {
+      .serviceItem {
+        flex-direction: row; /* Align items horizontally */
+        align-items: center; /* Center items vertically */
+      }
+    }
+
+    .serviceDetails {
+      flex-grow: 1;
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .serviceDetails {
+        margin-bottom: 0;
+        margin-right: 1.5rem;
+      }
+    }
+
+    .serviceName {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #343a40;
+      margin-bottom: 0.25rem;
+    }
+
+    .serviceDescription {
+      font-size: 0.9rem;
+      color: #6c757d;
+      line-height: 1.4;
+    }
+
+     .serviceMeta {
+        font-size: 0.9rem;
+        color: #495057;
+        font-weight: 500;
+        margin-top: 0.5rem;
+     }
+
+    .bookButton {
+      background-color: #28a745;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background-color 0.2s ease-in-out;
+      white-space: nowrap;
+      align-self: flex-start;
+      margin-top: 0.5rem; /* Add margin for small screens */
+    }
+
+    @media (min-width: 768px) {
+      .bookButton {
+         align-self: center;
+         margin-top: 0;
+      }
+    }
+
+    .bookButton:hover {
+      background-color: #218838;
+      text-decoration: none;
+    }
+
+    .loadingMessage,
+    .errorMessage {
+      text-align: center;
+      font-size: 1.1rem;
+      padding: 2rem;
+      border-radius: 6px;
+      margin-top: 1rem;
+    }
+
+    .loadingMessage {
+      color: #007bff;
+      background-color: #e7f3ff;
+    }
+
+    .errorMessage {
+      color: #dc3545;
+      background-color: #f8d7da;
+    }
+    
