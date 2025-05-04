@@ -121,7 +121,7 @@ export default function HomePage() {
             <div className={styles.aboutContent}>
                 <h3>Our Mission</h3>
                 <p>
-                We aim to simplify the car service experience by offering convenient online booking, transparent communication, and expert service for all your vehicle's needs 
+                We aim to simplify the car service experience by offering convenient online booking, transparent communication, and expert service for all your vehicle needs 
                 and to be the most trusted and convenient platform for car owners, delivering exceptional protection, repair, and inspection services with integrity and care.
                 </p>
                 <h3 className="mt-4">Why Choose Us?</h3>
