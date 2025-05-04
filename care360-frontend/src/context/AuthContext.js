@@ -29,7 +29,7 @@ export function AuthProvider({ children }) {
       console.log("AuthContext: User profile fetched:", response.data);
     } catch (error) {
       console.error('AuthContext: Failed to fetch user profile:', error.response?.data || error.message);
-      logout(); 
+      //logout(); 
     } finally {
         
     }
