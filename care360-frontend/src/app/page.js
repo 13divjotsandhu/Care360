@@ -4,7 +4,7 @@ import styles from './page.module.css';
 import Image from 'next/image';
 const serviceCategories = [
   { id: 'repair', name: 'Car Repair Services', description: 'Expert diagnostics, maintenance, and repairs for all your car troubles.', icon: '🔧', link: '/services' },
-  { id: 'detailing', name: 'Car Detailing Services', description: 'Restore your car\'s beauty with our comprehensive detailing packages.', icon: '✨', link: '/services' },
+  { id: 'detailing', name: 'Car Detailing Services', description: 'Restore your car beauty with our comprehensive detailing packages.', icon: '✨', link: '/services' },
   { id: 'pdi', name: 'Car PDI (Inspection)', description: 'Ensure your vehicle is in perfect condition before purchase or long trips.', icon: ' :)', link: '/services' },
 ];
 
