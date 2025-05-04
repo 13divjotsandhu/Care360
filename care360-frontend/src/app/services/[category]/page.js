@@ -33,7 +33,7 @@ const allServicesData = {
       { id: '680904c158fa43a90ca0a25f', name: 'Tire and brake inspection', description: 'Detailed check of tire condition, pressure, and brake system components.', price: 700, duration: 1 },
       { id: '680904d958fa43a90ca0a261', name: 'Electrical system check', description: 'Verifying lights, battery, alternator, and other electrical components.', price: 80, duration: 1 },
       { id: '680904f458fa43a90ca0a263', name: 'Fluid levels and leak check', description: 'Checking engine oil, coolant, brake fluid, and other essential fluids for levels and leaks.', price: 500, duration: 1 },
-      { id: '6809051558fa43a90ca0a265', name: 'Test drive and performance analysis', description: 'Assessing the vehicle\'s performance and handling during a test drive.', price: 90, duration: 1 },
+      { id: '6809051558fa43a90ca0a265', name: 'Test drive and performance analysis', description: 'Assessing the vehicle performance and handling during a test drive.', price: 90, duration: 1 },
     ]
   }
 };
