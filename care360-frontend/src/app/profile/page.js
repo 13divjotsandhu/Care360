@@ -112,7 +112,7 @@ export default function ProfilePage() {
         {error && <p className={styles.errorMessage}>{error}</p>}
 
         {!error && bookings.length === 0 && (
-          <p className={styles.noBookingsMessage}>You haven't made any bookings yet.</p>
+          <p className={styles.noBookingsMessage}>You have not made any bookings yet.</p>
         )}
 
         {!error && bookings.length > 0 && (
