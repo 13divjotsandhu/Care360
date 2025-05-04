@@ -18,9 +18,30 @@ console.log(process.env.PORT);
 const app = express();
 const server = http.createServer(app); // Create server instance for Socket.IO
 
+
 //Configure CORS 
 // Define allowed origins, methods, etc.
+const allowedOrigins = [
+  process.env.FRONTEND_URL, // Your Vercel deployment URL
+  process.env.CUSTOM_DOMAIN_URL, // Your custom domain URL
+  'http://localhost:3000'
+].filter(Boolean);
+
 const corsOptions = {
+  origin: function (origin, callback) {
+    // Checks if the request 'origin' is in the allowedOrigins array
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true); // Allow
+    } else {
+      callback(new Error('Not allowed by CORS')); // Deny
+    }
+  },
+  // ... other options
+};
+app.use(cors(corsOptions));
+
+
+/*const corsOptions = {
   origin: process.env.FRONTEND_URL || 'http://localhost:3000',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Explicitly allow Authorization header for JWT
@@ -30,6 +51,8 @@ const corsOptions = {
 
 console.log("CORS configured for origin:", corsOptions.origin); // Log CORS origin
 app.use(cors(corsOptions)); // Apply CORS middleware with options *before* routes
+
+*/
 
 app.use(express.json());
 
