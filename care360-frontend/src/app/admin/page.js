@@ -12,7 +12,8 @@ export default function AdminDashboardPage() {
   const [bookings, setBookings] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
-
+// State to track which booking is currently being updated
+const [updatingStatusId, setUpdatingStatusId] = useState(null);
   
   const isAdmin = true; // !!(user && user.role === 'admin'); // Example logic
   const authLoading = false; 
@@ -67,6 +68,48 @@ export default function AdminDashboardPage() {
 
   }, [authLoading, isAdmin]); // Re-run effect if auth state changes
 
+
+
+  // --- Handle Status Change ---
+  const handleStatusChange = async (bookingId, newStatus) => {
+    // Prevent changing if already updating or status is the same
+    if (updatingStatusId === bookingId || !newStatus) return;
+
+    setUpdatingStatusId(bookingId); // Set loading state for this specific booking row
+    setError(''); // Clear previous errors
+
+    try {
+      console.log(`Updating booking ${bookingId} status to ${newStatus}...`);
+      // Make API call to the backend endpoint to update status
+      const response = await api.patch(`/bookings/${bookingId}/status`, {
+        status: newStatus // Send the new status in the request body
+      });
+
+      console.log("Status update successful:", response.data);
+
+      // Update the status in the local state to reflect the change immediately
+      setBookings(currentBookings =>
+        currentBookings.map(booking =>
+          booking._id === bookingId ? { ...booking, status: newStatus.toLowerCase() } : booking // Ensure consistent casing
+        )
+      );
+      alert(`Booking ${bookingId.substring(0,6)}... status updated to ${newStatus}.`); // Simple feedback
+
+    } catch (err) {
+      console.error(`Failed to update status for booking ${bookingId}:`, err.response?.data || err.message);
+      setError(err.response?.data?.message || 'Failed to update status.');
+     
+      alert(`Error updating status: ${err.response?.data?.message || 'Please try again.'}`); // Simple alert for error
+    } finally {
+      setUpdatingStatusId(null); // Clear loading state for this row
+    }
+  };
+
+
+
+
+
+  
   // Helper function to format date
   const formatDate = (dateString) => {
     if (!dateString) return 'N/A';
@@ -138,10 +181,21 @@ export default function AdminDashboardPage() {
                   {/* Display Formatted Date */}
                   <td>{formatDate(booking.date)}</td>
                   {/* Display Status Badge */}
-                  <td>
-                    <span className={`${styles.statusBadge} ${getStatusClass(booking.status)}`}>
-                      {booking.status || 'N/A'}
-                    </span>
+                  <td data-label="Status:">
+                    {/* Status Dropdown */}
+                    <select
+                      value={booking.status || 'pending'} // Controlled component
+                      onChange={(e) => handleStatusChange(booking._id, e.target.value)}
+                      // Apply badge styles based on current status for appearance
+                      className={`${styles.statusBadge} ${getStatusClass(booking.status)}`}
+                      disabled={updatingStatusId === booking._id} // Disable while updating this row
+                      aria-label={`Update status for booking ${booking._id}`} // Accessibility
+                    >
+                      <option value="pending">Pending</option>
+                      <option value="confirmed">Confirmed</option>
+                      <option value="completed">Completed</option>
+                    </select>
+                    {updatingStatusId === booking._id && <span className="ml-2 animate-spin">⏳</span>}
                   </td>
                   
                   <td>
