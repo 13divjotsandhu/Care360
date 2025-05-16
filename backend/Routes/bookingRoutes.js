@@ -1,6 +1,6 @@
 const express = require('express');
 
-const { createBooking, getBookingDetails, getUserBookings,} = require('../controllers/bookingController');
+const { createBooking, getBookingDetails, getUserBookings,updateBookingStatus} = require('../controllers/bookingController');
 
 const authMiddleware = require('../middleware/authMiddleware');
 
@@ -15,6 +15,7 @@ router.get('/:id', authMiddleware, getBookingDetails);     ///api/bookings/:id
 //  Admins can fetch ALL bookings without an ID
 router.get('/', authMiddleware, getBookingDetails);
 
+router.patch('/:id/status', authMiddleware, updateBookingStatus);
 
 // GET /api/bookings/:id - Fetch a SINGLE booking by ID (User fetches own, Admin fetches any)
 // IMPORTANT: Keep this route AFTER '/my' so '/my' is matched first.
