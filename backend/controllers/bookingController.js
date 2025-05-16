@@ -45,6 +45,50 @@ const getUserBookings = async (req, res) => {
   }
 };
 
+//status function
+
+const updateBookingStatus = async (req, res) => {
+  // Check if the user is an admin
+  if (req.user.role !== 'admin') {
+    return res.status(403).json({ message: 'Access denied. Admin privileges required.' });
+  }
+
+  const { id } = req.params; // Booking ID from URL
+  const { status } = req.body; // New status from request body
+
+  // Validate the new status
+  const allowedStatuses = ['pending', 'confirmed', 'completed'];
+  if (!status || !allowedStatuses.includes(status.toLowerCase())) {
+    return res.status(400).json({ message: `Invalid status. Must be one of: ${allowedStatuses.join(', ')}` });
+  }
+
+  try {
+    const updatedBooking = await Booking.findByIdAndUpdate(
+      id,
+      { status: status.toLowerCase() },
+      { new: true, runValidators: true } // Return updated doc, run schema validations
+    )
+      .populate('user', 'name email')
+      .populate('service', 'name description price');
+
+    if (!updatedBooking) {
+      return res.status(404).json({ message: 'Booking not found.' });
+    }
+
+    console.log(`Booking ${id} status updated to ${status}`);
+    res.status(200).json(updatedBooking);
+
+  } catch (error) {
+    console.error(`Error updating status for booking ${id}:`, error);
+    if (error.name === 'CastError') {
+      return res.status(400).json({ message: 'Invalid Booking ID format.' });
+    }
+    if (error.name === 'ValidationError') {
+        return res.status(400).json({ message: 'Validation error updating status.', errors: error.errors });
+    }
+    res.status(500).json({ message: 'Server error while updating booking status.', error: error.message });
+  }
+};
 // Get booking details
 const getBookingDetails = async (req, res) => {
     try {
@@ -107,5 +151,5 @@ const getBookingDetails = async (req, res) => {
   }
 };
 
-module.exports = {   createBooking,   getUserBookings,  getBookingDetails, };
+module.exports = {   createBooking,   getUserBookings,  getBookingDetails,updateBookingStatus };
 
