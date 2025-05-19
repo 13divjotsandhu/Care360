@@ -6,7 +6,7 @@ function Footer() {
   const router = useRouter();
   const hideOnPaths = ['/chat']; // Add paths you want to hide footer on
 
-  if (hideOnPaths.includes(router.pathname)) {
+  if (hideOnPaths.includes(router./chat/${bookingId})) {
     return null;
   }
 
