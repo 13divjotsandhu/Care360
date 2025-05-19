@@ -4,7 +4,7 @@ import styles from './Footer.module.css';
 
 function Footer() {
   const router = useRouter();
-  const hideOnPaths = ['/chat/booking/${bookingId}']; // Add paths you want to hide footer on
+  const hideOnPaths = ['/chat/${bookingId}']; // Add paths you want to hide footer on
 
   if (hideOnPaths.includes(router.pathname)) {
     return null;
