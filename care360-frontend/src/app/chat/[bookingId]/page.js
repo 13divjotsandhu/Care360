@@ -133,13 +133,13 @@ function SimpleChatInterface() {
   }, [bookingId, userId, isAuthenticated, authLoading, router, fetchChatHistory]); 
 
   // Effect for Auto-Scrolling on new messages
-  /*
+  
   useEffect(() => {  
     if (!isLoadingHistory) { // Avoid scrolling during initial history load
         scrollToBottom("smooth");
     }
   }, [messages, isLoadingHistory, scrollToBottom]);
-  */
+  
 
 
   // Handler for Sending Messages 
