@@ -33,10 +33,10 @@ function SimpleChatInterface() {
   const messagesEndRef = useRef(null);
 
    // --- Scroll to Bottom ---
-  
+  /*
    const scrollToBottom = useCallback((behavior = "smooth") => {
     messagesEndRef.current?.scrollIntoView({ behavior }); //If the element exists, calls the browser's scrollIntoView method. 
-  }, []);
+  }, []);*/
 
   //Fetch Chat History 
   const fetchChatHistory = useCallback(async () => {
@@ -134,11 +134,11 @@ function SimpleChatInterface() {
 
   // Effect for Auto-Scrolling on new messages
   
-  useEffect(() => {  
+  /*useEffect(() => {  
     if (!isLoadingHistory) { // Avoid scrolling during initial history load
         scrollToBottom("smooth");
     }
-  }, [messages, isLoadingHistory, scrollToBottom]);
+  }, [messages, isLoadingHistory, scrollToBottom]);*/
   
 
 
@@ -228,7 +228,7 @@ function SimpleChatInterface() {
           </div>
         ))}
         {/* Scroll anchor */}
-        <div ref={messagesEndRef} className={styles.scrollAnchor} /> 
+       {/* <div ref={messagesEndRef} className={styles.scrollAnchor} /> */}
       </div>
 
       {/* Input Area */}
