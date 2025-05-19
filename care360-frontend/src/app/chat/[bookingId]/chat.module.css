@@ -44,6 +44,7 @@
     overflow-y: auto; /* Enable vertical scrolling */
     padding: 1.5rem;
     background-color: #f1f3f5; /* Slightly different background for messages */
+    min-height: 0;
   }
   
   .messageItem {
