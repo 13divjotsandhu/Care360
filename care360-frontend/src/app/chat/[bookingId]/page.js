@@ -33,9 +33,10 @@ function SimpleChatInterface() {
   const messagesEndRef = useRef(null);
 
    // --- Scroll to Bottom ---
+  /*
    const scrollToBottom = useCallback((behavior = "smooth") => {
     messagesEndRef.current?.scrollIntoView({ behavior }); //If the element exists, calls the browser's scrollIntoView method. 
-  }, []);
+  }, []);*/
 
   //Fetch Chat History 
   const fetchChatHistory = useCallback(async () => {
@@ -66,7 +67,8 @@ function SimpleChatInterface() {
     } finally {
       setIsLoadingHistory(false); // Finish loading history state
     }
-  }, [bookingId, isAuthenticated, scrollToBottom]); // Dependencies
+  }, [bookingId, isAuthenticated // scrollToBottom
+      ]); // Dependencies
 
   //Effect for Socket Connection and Event Listeners
   useEffect(() => {
@@ -131,11 +133,13 @@ function SimpleChatInterface() {
   }, [bookingId, userId, isAuthenticated, authLoading, router, fetchChatHistory]); 
 
   // Effect for Auto-Scrolling on new messages
+  /*
   useEffect(() => {  
     if (!isLoadingHistory) { // Avoid scrolling during initial history load
         scrollToBottom("smooth");
     }
   }, [messages, isLoadingHistory, scrollToBottom]);
+  */
 
 
   // Handler for Sending Messages 
