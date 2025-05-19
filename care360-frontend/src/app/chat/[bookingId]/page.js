@@ -52,7 +52,7 @@ function SimpleChatInterface() {
         setMessages(response.data); // Populate state with historical messages
         console.log(`Chat: Fetched ${response.data.length} historical messages.`);
         // Scroll to bottom immediately after loading history
-        setTimeout(() => scrollToBottom('auto'), 100);
+      //  setTimeout(() => scrollToBottom('auto'), 100);
       } else {
         setMessages([]);
         console.warn("Chat: Received non-array response for chat history:", response.data);
