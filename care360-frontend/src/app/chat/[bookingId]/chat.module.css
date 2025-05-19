@@ -16,6 +16,7 @@
     padding: 1rem 1.5rem;
     border-bottom: 1px solid #dee2e6;
     background-color: #f8f9fa; 
+     flex-shrink: 0;
   }
   
   .chatHeader h1 {
@@ -106,6 +107,7 @@
     padding: 1rem 1.5rem;
     border-top: 1px solid #dee2e6;
     background-color: #f8f9fa;
+     flex-shrink: 0;
   }
   
   .inputForm {
