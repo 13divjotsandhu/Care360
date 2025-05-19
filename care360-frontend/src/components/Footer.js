@@ -7,7 +7,7 @@ function Footer() {
   const path = router.pathname; // This gives dynamic route pattern e.g. /chat/booking/[bookingId]
 
   // Hide footer if the path starts with /chat/booking
-  if (path.startsWith('/chat/booking')) {
+  if (path.startsWith('/chat/${bookingId}')) {
     return null;
   }
 
