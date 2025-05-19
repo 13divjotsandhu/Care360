@@ -33,10 +33,10 @@ function SimpleChatInterface() {
   const messagesEndRef = useRef(null);
 
    // --- Scroll to Bottom ---
-  /*
+  
    const scrollToBottom = useCallback((behavior = "smooth") => {
     messagesEndRef.current?.scrollIntoView({ behavior }); //If the element exists, calls the browser's scrollIntoView method. 
-  }, []);*/
+  }, []);
 
   //Fetch Chat History 
   const fetchChatHistory = useCallback(async () => {
@@ -228,7 +228,7 @@ function SimpleChatInterface() {
           </div>
         ))}
         {/* Scroll anchor */}
-        {/*<div ref={messagesEndRef} className={styles.scrollAnchor} /> */}
+        <div ref={messagesEndRef} className={styles.scrollAnchor} /> 
       </div>
 
       {/* Input Area */}
