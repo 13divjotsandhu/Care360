@@ -228,7 +228,7 @@ function SimpleChatInterface() {
           </div>
         ))}
         {/* Scroll anchor */}
-        <div ref={messagesEndRef} className={styles.scrollAnchor} />
+        {/*<div ref={messagesEndRef} className={styles.scrollAnchor} /> */}
       </div>
 
       {/* Input Area */}
